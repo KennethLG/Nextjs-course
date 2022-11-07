@@ -1,7 +1,9 @@
 import { LikeButton } from "./LikeButton";
 
 const fetchPosts = () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
+  return fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: 'no-store'
+  }).then((res) =>
     res.json()
   );
 };
